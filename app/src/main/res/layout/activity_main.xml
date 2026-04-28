@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Strassen vs Normal Benchmark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/sizeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter size: 2, 4, or 8"
+            android:inputType="number"
+            android:padding="10dp"
+            android:background="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Matrices"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:text="Matrix A"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <GridLayout
+            android:id="@+id/gridA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="8"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"/>
+
+        <TextView
+            android:text="Matrix B"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <GridLayout
+            android:id="@+id/gridB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="8"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"/>
+
+        <Button
+            android:id="@+id/btnCompare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Run Benchmark"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Results here"/>
+    </LinearLayout>
+</ScrollView>
